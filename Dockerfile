@@ -1,8 +1,5 @@
 FROM nginx:latest
 
-RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-
-COPY html/* /usr/share/nginx/html/
+COPY conf.d /etc/nginx/conf.d
 
 EXPOSE 80
-
